@@ -1,0 +1,130 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head><!--test-->
+    <meta charset="utf-8">
+    <title>매송인테리어</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <base href="/">
+    <!--<link rel="stylesheet/less" href="bower_components/bootstrap/dist/css/bootstrap.css"/>-->
+    <!--<link rel="stylesheet" href="styles/main.css"/>-->
+
+    <!-- build:js(app) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/bootstrap-theme.css">
+    <!--<link rel="stylesheet" href="bower_components/angular-animate/angular-animate.css">-->
+    <!-- custom -->
+    <link rel="stylesheet" href="styles/wacommon.css">
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icon/cione_logo.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icon/cione_logo.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icon/cione_logo.png">
+    <link rel="apple-touch-icon-precomposed" href="images/icon/cione_logo.png">
+    <!--<link rel="shortcut icon" href="images/icon/favicon.png">-->
+    <link rel="shortcut icon" href="images/icon/cione_logo.png">
+
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script src="scripts/design/respond.js"></script>
+    <![endif]-->
+
+
+
+
+    <script type="text/javascript">
+// Firefox worked fine. Internet Explorer shows scrollbar because of frameborder
+function resizeFrame(f) {
+f.style.height = f.contentWindow.document.body.scrollHeight + "px";
+}
+
+    </script>
+
+</head>
+<body body onload="resizeFrame(document.getElementById('childframe'))" bgcolor="#cccccc" style="overflow-x:hidden; ">
+
+<!--<div data-spy="scroll" data-target="#cioneScrollspy" data-offset="0" id="scrollContent">-->
+
+<!-- header(menu bar), quick menu, mobile quick menu -->
+
+<div class="row clearfix">
+    <div class="col-xs-12">
+    <iframe src="/views/masion_header.html" class="col-xs-12" style="height:260px"></iframe>
+</div>
+</div>
+
+<div class="row clearfix">
+    <div class="col-xs-12">
+        <div class="container">
+            <div class="col-xs-3">
+                <iframe src="/views/masion_sidemenu.html" scrolling="no" frameborder="0"  height="550px;"></iframe>
+            </div>
+
+            <div class="col-xs-9">
+
+                <iframe src="/views/1000-Main/050-1000-main.html" scrolling="no" frameborder="0" class="col-xs-12" name='contentframe' id='childframe'></iframe>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row clearfix" style="margin-top: 110px; padding-top:50px;  border-top:2px solid #737373; ">
+    <div class="col-xs-12" style="padding-left: 0px; padding-right: 0px;">
+        <iframe src="/views/footer.html" class="col-xs-12" style="padding-left: 0px; padding-right: 0px;"></iframe>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="scripts/design/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/design/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/design/scripts.js"></script>
+<script src="scripts/design/respond.js"></script>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="scripts/design/bootstrap.min.js"></script>
+<script type="text/javascript">
+    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        var msViewportStyle = document.createElement("style")
+        msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"))
+        document.getElementsByTagName("head")[0].appendChild(msViewportStyle)
+    }
+</script>
+</body>
+</html>
