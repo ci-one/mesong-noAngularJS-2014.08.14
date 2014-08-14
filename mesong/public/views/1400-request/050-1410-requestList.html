@@ -191,8 +191,107 @@
 
 
             <div class="col-md-9">
+                <div class="col-xs-12 column line-bottom">
+                    <div class="row clearfix">
+                        <h3 class="pull-left"> 견적문의 </h3>
+                        <ul class="list-unstyled list-inline pull-right pager01">
+                            <li>
+                                <a href="#"> HOME ></a>
+                            </li>
+                            <li class="active">
+                                <a href="#"> 견적문의 ></a>
+                            </li>
 
-050-1410-requestList.html
+                        </ul>
+                    </div>
+                </div>
+                <div class="row clearfix"><br></div>
 
+                <div class="row clearfix">
+                    <div class="col-md-offset-1 col-md-10 column col-md-offset-1">
+
+                        <table class="table table-bordered table-condensed">
+                            <thead>
+                            <tr>
+                                <th>제목</th>
+                                <th>업체명</th>
+                                <th>작성자</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat='items in pagedItems[currentPage]'>
+                                <th class="tstyle"><a href="/views/1400-request/050-1420-requestDetail.html"> {{items.title}}</a></th>
+                                <td> {{items.comp}}</td>
+                                <td class="tstyle"> {{items.writer}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <td colspan="2">
+                            <div class="pagination pull-right">
+                                <li ng-class="{disabled: currentPage == 0}">
+                                    <a href ng-click="prevPage()">« Prev</a>
+                                </li>
+                                <li ng-repeat="n in range(pagedItems.length)"
+                                    ng-class="{active: n == currentPage}"
+                                    ng-click="setPage()">
+                                    <a href ng-bind="n + 1"></a>
+                                </li>
+                                <li ng-class="{disabled: currentPage == pagedItems.length - 1}">
+                                    <a href ng-click="nextPage()">Next »</a>
+                                </li>
+                            </div>
+                        </td>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row clearfix" style="margin-top: 110px; padding-top:50px;  border-top:2px solid #737373; ">
+        <div class="col-md-12" style="padding-left: 0px; padding-right: 0px;">
+            <div class="container" style="width: 960px;">
+                <footer>
+
+                    <!-- end of footer -->
+                    <div class="col-md-5">
+                        <a class="pull-right"><img src="../images/logo_small.png"></a>
+                    </div>
+                    <div class="col-md-7 pull-right" style="font-size: 11px;">
+                        <p>
+                            상호 : 메종 디자인 | 대표 최홍인 | T:032)329-9808 | F:032)329-9811</p>
+
+                        <p>주소 : [420-861] 경기도 부천시 원미구 길주로 77번길 19, 세진 프라자 503호</p>
+
+                        <p>　　　(상동 532-16번지 세진 PLAZA 503호)
+                        </p>
+                        <address class="">
+                            COPYRIGHT &copy; 2014 메종디자인 ALL RIGHTS RESERVED
+                        </address>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<script type="text/javascript" src="scripts/design/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/design/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/design/scripts.js"></script>
+<script src="scripts/design/respond.js"></script>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="scripts/design/bootstrap.min.js"></script>
+<script type="text/javascript">
+    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        var msViewportStyle = document.createElement("style")
+        msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"))
+        document.getElementsByTagName("head")[0].appendChild(msViewportStyle)
+    }
+</script>
 </body>
 </html>
