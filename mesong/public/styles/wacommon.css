@@ -101,3 +101,9 @@ iframe.col-xs-12{
 .col-xs-12{
     padding : 0px 0px 0px 0px;
 }
+
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+

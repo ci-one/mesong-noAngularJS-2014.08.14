@@ -13,7 +13,7 @@ var app = express();
 
 // all environments
 app.engine('html', require('ejs').renderFile);
-app.set('port', process.env.PORT || 3401);
+app.set('port', process.env.PORT || 3402);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
 app.use(express.favicon());
