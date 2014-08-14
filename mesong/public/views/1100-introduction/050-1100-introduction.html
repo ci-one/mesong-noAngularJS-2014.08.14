@@ -1,82 +1,316 @@
-<link href="styles/introduction.css" rel="stylesheet">
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head><!--test-->
+    <meta charset="utf-8">
+    <title>매송인테리어</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <base href="/">
+    <!--<link rel="stylesheet/less" href="bower_components/bootstrap/dist/css/bootstrap.css"/>-->
+    <!--<link rel="stylesheet" href="styles/main.css"/>-->
+
+    <!-- build:js(app) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="../../styles/bootstrap.min.css">
+    <link rel="stylesheet" href="../../styles/bootstrap-theme.css">
+    <!--<link rel="stylesheet" href="bower_components/angular-animate/angular-animate.css">-->
+    <!-- custom -->
+    <!--<link rel="stylesheet" href="styles/wacommon.css">-->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icon/cione_logo.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icon/cione_logo.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icon/cione_logo.png">
+    <link rel="apple-touch-icon-precomposed" href="images/icon/cione_logo.png">
+    <!--<link rel="shortcut icon" href="images/icon/favicon.png">-->
+    <link rel="shortcut icon" href="images/icon/cione_logo.png">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script src="scripts/design/respond.js"></script>
+    <![endif]-->
+
+
+    <link href="../../styles/main.css" rel="stylesheet">
+    <link href="../../styles/wacommon.css" rel="stylesheet">
+    <link href="../../styles/masion.css" rel="stylesheet">
+
+    <link href="../../styles/introduction.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div style="overflow: hidden; height: 90%">
+    <div class="top-bg">
+        <div class="row clearfix ">
+            <div class="container">
+                <div class="col-md-12 column">
+                    <a href="#"><h1 class="text-center"><img src="../../images/logo_large.png" alt="메종디자인"></h1></a>
+
+                    <p class="log"><a href="/views/1700-login/050-1700-login.html"
+                                      style="font-size: 7px;">로그인</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-light" role="navigation">
+        <div class="col-md-12">
+            <div class="container" style="width: 960px;">
+                <ul class="nav nav-justified">
+
+                    <li ng-mouseover="">
+                        <a href="/views/1100-introduction/050-1100-introduction.html">회사소개</a>
+
+                    </li>
+                    <!--<li>-->
+                    <!--<a href="#organization">조직도</a>-->
+                    <!--</li>-->
+                    <li>
+                        <a href="/views/1300-portfolio/050-1300-portfolio1.html">포트폴리오</a>
+                    </li>
+                    <li>
+                        <a href="/views/1400-request/050-1400-requestWrite.html"">견적문의</a>
+                    </li>
+                    <li>
+                        <a href="/views/1500-contract/050-1500-contract.html">계약공정</a>
+                    </li>
+                    <li>
+                        <a href="/views/1600-direction/050-1600-direction.html">오시는 길</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- 컨텐츠 -->
 
 <div class="row clearfix">
-    <div class="col-md-12 column">
-        <ul class="nav nav-tabs">
-            <li class="active">
-                <a href="#/introduction"><strong>인사말</strong> </a>
-            </li>
-            <li>
-                <a href="#/organization"> 조직도</a>
-            </li>
+    <div class="col-md-12">
+        <div class="container" style="width: 960px;">
+            <!--사이드 메뉴-->
+            <div class="col-md-3">
+                <div class="container">
+                    <img src="/images/port-title.png" style="margin-top:15px;">
+                    <ul class="list-unstyled myborder">
+                        <li>
+                        </li>
+                        <li class="my">
+                            <a href="/views/1300-portfolio/050-1300-portfolio1.html"><img src="/images/bullet_01.png"
+                                                                                          class="bullet">레　스　토　랑</a>
+                        </li>
+                        <li class="my">
+                            <a href="/views/1300-portfolio/050-1300-portfolio2.html"> <img
+                                    src="/images/bullet_01.png" class="bullet">모 델 하 우 스</a>
+                        </li>
+                        <li class="my">
+                            <a href="/views/1300-portfolio/050-1300-portfolio3.html"><img src="/images/bullet_01.png"
+                                                                                          class="bullet">뷔　　　　　페</a>
+                        </li>
+                        <li class="my">
+                            <a href="/views/1300-portfolio/050-1300-portfolio4.html"><img src="/images/bullet_01.png"
+                                                                                          class="bullet">스　　포　　츠</a>
+                        </li>
+                        <li class="my">
+                            <a href="/views/1300-portfolio/050-1300-portfolio5.html"><img src="/images/bullet_01.png"
+                                                                                          class="bullet">신부대기.폐백실</a>
+                        </li>
+                        <li class="my">
+                            <a href="/views/1300-portfolio/050-1300-portfolio6.html"> <img
+                                    src="/images/bullet_01.png" class="bullet">오　　피　　스</a>
+                        </li>
+                        <li class="my">
+                            <a href="/views/1300-portfolio/050-1300-portfolio7.html"><img src="/images/bullet_01.png"
+                                                                                          class="bullet">웨　　딩　　홀</a>
+                        </li>
+                        <li class="my">
+                            <a href="/views/1300-portfolio/050-1300-portfolio8.html"> <img
+                                    src="/images/bullet_01.png" class="bullet">의　　　　　료</a>
+                        </li>
+                        <li class="my">
+                            <a href="/views/1300-portfolio/050-1300-portfolio9.html"> <img
+                                    src="/images/bullet_01.png" class="bullet">종　　　　　교</a>
+                        </li>
+                        <li class="my">
+                            <a href="/views/1300-portfolio/050-1300-portfolio10.html"> <img
+                                    src="/images/bullet_01.png" class="bullet">주　　　　　택</a>
+                        </li>
+                        <li class="my">
+                            <a href="/views/1300-portfolio/050-1300-portfolio11.html"><img
+                                    src="/images/bullet_01.png" class="bullet">체　　인　　점</a>
+                        </li>
+                        <li style="padding-bottom: 15px; padding-left: 10px;">
+                            <a href="/views/1300-portfolio/050-1300-portfolio12.html"> <img
+                                    src="/images/bullet_01.png" class="bullet">호　　　　　텔</a>
+                        </li>
 
-        </ul>
-        <ul class="list-unstyled list-inline pull-right pager01">
-            <li>
-                <a href="#"> HOME ></a>
-            </li>
-            <li>
-                <a href="#"> 회사소개 ></a>
-            </li>
-            <li class="active">
-                조직도
-            </li>
-        </ul>
-    </div>
-</div>
+                    </ul>
+                </div>
+            </div>
 
 
+            <!--우측 컨텐츠-->
 
-<div class="col-md-12 column">
-    <div class="row clearfix">
-        <div class="well01">
-            <div class="col-md-9 column">
-                <p>
-                    저희 <strong class="text01">메종 건축 인테리어</strong> 에서는 <br><span class="text02">중후함과 아늑함이 숨쉬는
+
+            <div class="col-md-9">
+
+                <div class="row clearfix">
+                    <div class="col-md-12 column">
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="/views/1100-introduction/050-1100-introduction.html"><strong>인사말</strong> </a>
+                            </li>
+                            <li>
+                                <a href="/views/1200-organization/050-1200-organization.html"> 조직도</a>
+                            </li>
+
+                        </ul>
+                        <ul class="list-unstyled list-inline pull-right pager01">
+                            <li>
+                                <a href="#"> HOME ></a>
+                            </li>
+                            <li>
+                                <a href="#"> 회사소개 ></a>
+                            </li>
+                            <li class="active">
+                                조직도
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-md-12 column">
+                    <div class="row clearfix">
+                        <div class="well01">
+                            <div class="col-md-9 column">
+                                <p>
+                                    저희 <strong class="text01">메종 건축 인테리어</strong> 에서는 <br><span class="text02">중후함과 아늑함이 숨쉬는
 									<br>공간을 디자인하여 드리겠습니다.</span>
-                </p>
+                                </p>
 
-                <p>
-                    귀하의 사업장을 찾는 고객에게 <em class="text03">친숙함</em>을<br>
-                    전하는 <em class="text03"> 맞춤형 </em> 디자인을 해드리겠습니다.
-                </p>
+                                <p>
+                                    귀하의 사업장을 찾는 고객에게 <em class="text03">친숙함</em>을<br>
+                                    전하는 <em class="text03"> 맞춤형 </em> 디자인을 해드리겠습니다.
+                                </p>
 
+
+                            </div>
+                            <div class="col-md-3 column">
+                                <img src="../../images/introductgraphic.png" class="center-block">
+                            </div>
+                            <div class="row clearfix"></div>
+                            <div class="col-md-12 column">
+                                <p>
+                                    힐링이 느껴지는 실내 공간을 디자인 해 드리겠습니다.<br>
+
+                                    또한 책임있는 공사로 <span class="text03"> 저렴하고 고품격 </span>의
+                                    실내 공간을 만들어 드리겠습니다.
+                                </p>
+
+                                <p>
+                                    메종 건축 인테리어는
+                                    디자인부터 인테리어 수주ㆍ공사까지 고객의
+                                    소리를 귀중하게 듣습니다.
+                                </p>
+
+                                <p>
+
+                                    그리고 우리의 노-하우를 드립니다.
+                                </p>
+
+                                <p class="str01">
+                                    귀하의 멋과 꿈을 담아서 디자인하고 현실로<br>
+                                    구현하여 드리는 메종 건축 인테리어에 오신 것을
+                                    감사드립니다.
+                                </p>
+
+                                <p class="text-right"><em class="text04"> -메종건축인테리어 임직원 일동-</em></p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
-            <div class="col-md-3 column">
-                <img src="images/introductgraphic.png" class="center-block">
-            </div>
-            <div class="row clearfix"></div>
-            <div class="col-md-12 column">
-                <p>
-                    힐링이 느껴지는 실내 공간을 디자인 해 드리겠습니다.<br>
+        </div>
 
-                    또한 책임있는 공사로 <span class="text03"> 저렴하고 고품격 </span>의
-                    실내 공간을 만들어 드리겠습니다.
-                </p>
+        <div class="row clearfix" style="margin-top: 110px; padding-top:50px;  border-top:2px solid #737373; ">
+            <div class="col-md-12" style="padding-left: 0px; padding-right: 0px;">
+                <div class="container" style="width: 960px;">
+                    <footer>
 
-                <p>
-                    메종 건축 인테리어는
-                    디자인부터 인테리어 수주ㆍ공사까지 고객의
-                    소리를 귀중하게 듣습니다.
-                </p>
+                        <!-- end of footer -->
+                        <div class="col-md-5">
+                            <a class="pull-right"><img src="../images/logo_small.png"></a>
+                        </div>
+                        <div class="col-md-7 pull-right" style="font-size: 11px;">
+                            <p>
+                                상호 : 메종 디자인 | 대표 최홍인 | T:032)329-9808 | F:032)329-9811</p>
 
-                <p>
+                            <p>주소 : [420-861] 경기도 부천시 원미구 길주로 77번길 19, 세진 프라자 503호</p>
 
-                    그리고 우리의 노-하우를 드립니다.
-                </p>
+                            <p>　　　(상동 532-16번지 세진 PLAZA 503호)
+                            </p>
+                            <address class="">
+                                COPYRIGHT &copy; 2014 메종디자인 ALL RIGHTS RESERVED
+                            </address>
+                    </footer>
 
-                <p class="str01">
-                    귀하의 멋과 꿈을 담아서 디자인하고 현실로<br>
-                    구현하여 드리는 메종 건축 인테리어에 오신 것을
-                    감사드립니다.
-                </p>
-
-                <p class="text-right"><em class="text04"> -메종건축인테리어 임직원 일동-</em></p>
-
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+
+<script type="text/javascript" src="scripts/design/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/design/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/design/scripts.js"></script>
+<script src="scripts/design/respond.js"></script>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="scripts/design/bootstrap.min.js"></script>
+<script type="text/javascript">
+    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        var msViewportStyle = document.createElement("style")
+        msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"))
+        document.getElementsByTagName("head")[0].appendChild(msViewportStyle)
+    }
+</script>
+</body>
+</html>

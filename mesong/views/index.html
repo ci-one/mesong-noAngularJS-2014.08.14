@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="styles/bootstrap-theme.css">
     <!--<link rel="stylesheet" href="bower_components/angular-animate/angular-animate.css">-->
     <!-- custom -->
-    <link rel="stylesheet" href="styles/wacommon.css">
+    <!--<link rel="stylesheet" href="styles/wacommon.css">-->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
 
@@ -44,7 +44,6 @@
     <link rel="apple-touch-icon-precomposed" href="images/icon/cione_logo.png">
     <!--<link rel="shortcut icon" href="images/icon/favicon.png">-->
     <link rel="shortcut icon" href="images/icon/cione_logo.png">
-
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -62,51 +61,643 @@
     <![endif]-->
 
 
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/wacommon.css" rel="stylesheet">
+    <link href="styles/masion.css" rel="stylesheet">
 
-
-    <script type="text/javascript">
-// Firefox worked fine. Internet Explorer shows scrollbar because of frameborder
-function resizeFrame(f) {
-f.style.height = f.contentWindow.document.body.scrollHeight + "px";
-}
-
-    </script>
 
 </head>
-<body body onload="resizeFrame(document.getElementById('childframe'))" bgcolor="#cccccc" style="overflow-x:hidden; ">
+<body>
 
-<!--<div data-spy="scroll" data-target="#cioneScrollspy" data-offset="0" id="scrollContent">-->
+<div style="overflow: hidden; height: 90%">
+    <div class="top-bg">
+        <div class="row clearfix ">
+            <div class="container">
+                <div class="col-md-12 column">
+                    <a href="#"><h1 class="text-center"><img src="../images/logo_large.png" alt="메종디자인"></h1></a>
 
-<!-- header(menu bar), quick menu, mobile quick menu -->
-
-<div class="row clearfix">
-    <div class="col-xs-12">
-    <iframe src="/views/masion_header.html" class="col-xs-12" style="height:260px"></iframe>
-</div>
-</div>
-
-<div class="row clearfix">
-    <div class="col-xs-12">
-        <div class="container">
-            <div class="col-xs-3">
-                <iframe src="/views/masion_sidemenu.html" scrolling="no" frameborder="0"  height="550px;"></iframe>
+                    <p class="log"><a href="/views/1700-login/050-1700-login.html"
+                                      style="font-size: 7px;">로그인</a></p>
+                </div>
             </div>
 
-            <div class="col-xs-9">
+        </div>
+    </div>
 
-                <iframe src="/views/1000-Main/050-1000-main.html" scrolling="no" frameborder="0" class="col-xs-12" name='contentframe' id='childframe'></iframe>
 
+    <nav class="navbar navbar-light" role="navigation">
+        <div class="col-md-12">
+            <div class="container" style="width: 960px;">
+                <ul class="nav nav-justified">
+
+                    <li ng-mouseover="">
+                        <a href="/views/1100-introduction/050-1100-introduction.html" >회사소개</a>
+
+                    </li>
+                    <!--<li>-->
+                    <!--<a href="#organization">조직도</a>-->
+                    <!--</li>-->
+                    <li>
+                        <a href="/views/1300-portfolio/050-1300-portfolio1.html" >포트폴리오</a>
+                    </li>
+                    <li>
+                        <a href="/views/1400-request/050-1400-requestWrite.html" ">견적문의</a>
+                    </li>
+                    <li>
+                        <a href="/views/1500-contract/050-1500-contract.html" >계약공정</a>
+                    </li>
+                    <li>
+                        <a href="/views/1600-direction/050-1600-direction.html" >오시는 길</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!-- 컨텐츠 -->
+
+<div class="row clearfix">
+<div class="col-md-12">
+<div class="container"  style="width: 960px;">
+<!--사이드 메뉴-->
+<div class="col-md-3">
+    <div class="container">
+        <img src="/images/port-title.png" style="margin-top:15px;">
+        <ul class="list-unstyled myborder">
+            <li>
+            </li>
+            <li class="my">
+                <a href="/views/1300-portfolio/050-1300-portfolio1.html" ><img src="/images/bullet_01.png"
+                                                                                             class="bullet">레　스　토　랑</a>
+            </li>
+            <li class="my">
+                <a href="/views/1300-portfolio/050-1300-portfolio2.html" > <img
+                        src="/images/bullet_01.png" class="bullet">모 델 하 우 스</a>
+            </li>
+            <li class="my">
+                <a href="/views/1300-portfolio/050-1300-portfolio3.html" ><img src="/images/bullet_01.png"
+                                                                                             class="bullet">뷔　　　　　페</a>
+            </li>
+            <li class="my">
+                <a href="/views/1300-portfolio/050-1300-portfolio4.html" ><img src="/images/bullet_01.png"
+                                                                                             class="bullet">스　　포　　츠</a>
+            </li>
+            <li class="my">
+                <a href="/views/1300-portfolio/050-1300-portfolio5.html" ><img src="/images/bullet_01.png"
+                                                                                             class="bullet">신부대기.폐백실</a>
+            </li>
+            <li class="my">
+                <a href="/views/1300-portfolio/050-1300-portfolio6.html" > <img
+                        src="/images/bullet_01.png" class="bullet">오　　피　　스</a>
+            </li>
+            <li class="my">
+                <a href="/views/1300-portfolio/050-1300-portfolio7.html" ><img src="/images/bullet_01.png"
+                                                                                             class="bullet">웨　　딩　　홀</a>
+            </li>
+            <li class="my">
+                <a href="/views/1300-portfolio/050-1300-portfolio8.html" > <img
+                        src="/images/bullet_01.png" class="bullet">의　　　　　료</a>
+            </li>
+            <li class="my">
+                <a href="/views/1300-portfolio/050-1300-portfolio9.html" > <img
+                        src="/images/bullet_01.png" class="bullet">종　　　　　교</a>
+            </li>
+            <li class="my">
+                <a href="/views/1300-portfolio/050-1300-portfolio10.html" > <img
+                        src="/images/bullet_01.png" class="bullet">주　　　　　택</a>
+            </li>
+            <li class="my">
+                <a href="/views/1300-portfolio/050-1300-portfolio11.html" ><img
+                        src="/images/bullet_01.png" class="bullet">체　　인　　점</a>
+            </li>
+            <li style="padding-bottom: 15px; padding-left: 10px;">
+                <a href="/views/1300-portfolio/050-1300-portfolio12.html" > <img
+                        src="/images/bullet_01.png" class="bullet">호　　　　　텔</a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+
+<!--우측 컨텐츠-->
+
+
+<div class="col-md-9">
+<!--이미지 슬라이드 부분-->
+<div class="row clearfix">
+    <div class="col-md-8 column">
+        <div class="carousel slide" id="carousel-519679" style="height: 235px;">
+            <ol class="carousel-indicators">
+                <li data-slide-to="0" data-target="#carousel-519679">
+                </li>
+                <li data-slide-to="1" data-target="#carousel-519679">
+                </li>
+                <li data-slide-to="2" data-target="#carousel-519679" class="active">
+                </li>
+                <li data-slide-to="3" data-target="#carousel-519679">
+                </li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item">
+                    <!--<img alt="" src="http://lorempixel.com/1600/500/sports/1"/>-->
+                    <img alt="" src="/images/portfolio/sports/sports_04.png"/>
+
+                </div>
+                <div class="item">
+                    <img alt="" src="/images/portfolio/office/office_10.png"/>
+
+                </div>
+                <div class="item active">
+                    <img alt="" src="/images/portfolio/hotel/hotel_03.png"/>
+
+                </div>
+                <div class="item">
+                    <img alt="" src="/images/portfolio/office/office_04.png"/>
+
+                </div>
+            </div>
+            <!--<a class="left carousel-control" href="" data-slide="prev"><span-->
+            <!--class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control"-->
+            <!--href=""-->
+            <!--data-slide="next"><span-->
+            <!--class="glyphicon glyphicon-chevron-right"></span></a>-->
+        </div>
+    </div>
+    <!--이미지 슬라이드 종료-->
+
+    <!--우측 버튼-->
+    <div class="col-md-4 column">
+        <p><a href="#requestWrite"><img src="../../images/reqButtonMain.png" class="">
+        </a></p>
+
+        <p><a href="#direction"><img src="../../images/dirButtonMain.png">
+        </a></p>
+
+        <p><img src="../../images/contactImage.png">
+        </p>
+    </div>
+    <!--버튼 종료-->
+</div>
+
+<br>
+
+<div class="row clearfix"
+     style="border: 1px solid #6e471d;padding: 10px 10px 10px 10px; margin-left: 0px;margin-right: 0px">
+    <div class="row clearfix" style="margin-left:10px;margin-right: 10px;margin-bottom: -5px;">
+        <div class="col-md-6 column" style="border-right:2px dotted #737373; padding-left: 0px;">
+            <h3 class="pull-left"><img src="../../images/bullet_02.png"> 레스토랑</h3>
+            <ul class="list-unstyled list-inline pull-right pager01">
+                <li>
+                    <a href="#/portfolio1"> 더보기 ></a>
+                </li>
+
+            </ul>
+            <div class="row clearfix"></div>
+            <div class="col-md-6 column">
+                <ul class="list-unstyled port-thum list-inline">
+                    <li data-toggle="modal" data-target="#modal-container-01"><img
+                            src="../../images/portfolio/restaurent/restaurent_03_thum.png" class="img-thumbnail">
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 column">
+                <ul class="list-unstyled port-thum list-inline">
+                    <li data-toggle="modal" data-target="#modal-container-02"><img
+                            src="../../images/portfolio/restaurent/restaurent_04_thum.png" class="img-thumbnail">
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="col-md-6 column" style=" padding-right: 0px;">
+            <h3 class="pull-left"><img src="../../images/bullet_02.png"> 모델하우스</h3>
+            <ul class="list-unstyled list-inline pull-right pager01">
+                <li>
+                    <a href="#/portfolio2"> 더보기 ></a>
+
+                </li>
+            </ul>
+            <div class="row clearfix"></div>
+            <div class="col-md-6 column">
+                <ul class="list-unstyled port-thum list-inline">
+                    <li data-toggle="modal" data-target="#modal-container-03">
+                        <img style="height: 73px; width: 127px;"
+                             src="../../images/portfolio/md-house/md-house_09_thum.png"
+                             class="img-thumbnail">
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 column">
+                <ul class="list-unstyled port-thum list-inline">
+                    <li data-toggle="modal" data-target="#modal-container-04">
+                        <img style="height: 73px; width: 127px;"
+                             src="../../images/portfolio/md-house/md-house_10_thum.png"
+                             class="img-thumbnail">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row clearfix" style="border-top:2px dotted #737373; margin-left:10px;margin-right: 10px ">
+
+        <div class="col-md-6 column" style="border-right:2px dotted #737373; padding-left: 0px;margin-right: 1px;">
+            <h3 class="pull-left"><img src="../../images/bullet_02.png"> 스포츠</h3>
+            <ul class="list-unstyled list-inline pull-right pager01">
+                <li>
+                    <a href="#/portfolio4"> 더보기 ></a>
+                </li>
+            </ul>
+            <div class="row clearfix"></div>
+            <div class="col-md-6 column"
+            ">
+            <ul class="list-unstyled port-thum list-inline">
+                <li data-toggle="modal" data-target="#modal-container-05">
+                    <img src="../../images/portfolio/sports/sports_04_thum.png" class="img-thumbnail">
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6 column">
+            <ul class="list-unstyled port-thum list-inline">
+                <li data-toggle="modal" data-target="#modal-container-06">
+                    <img src="../../images/portfolio/sports/sports_06_thum.png" class="img-thumbnail">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-6 column" style=" padding-right: 0px;margin-left: -1px;">
+        <h3 class="pull-left"><img src="../../images/bullet_02.png"> 웨딩홀</h3>
+        <ul class="list-unstyled list-inline pull-right pager01">
+            <li>
+                <a href="#/portfolio7"> 더보기 ></a>
+            </li>
+        </ul>
+
+        <div class="row clearfix"></div>
+        <div class="col-md-6 column">
+            <ul class="list-unstyled port-thum list-inline">
+                <li data-toggle="modal" data-target="#modal-container-07">
+                    <img src="../../images/portfolio/weddinghall/weddinghall_02_thum.png" class="img-thumbnail">
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6 column">
+            <ul class="list-unstyled port-thum list-inline">
+                <li data-toggle="modal" data-target="#modal-container-08">
+                    <img src="../../images/portfolio/weddinghall/weddinghall_04_thum.png" class="img-thumbnail">
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+</div>
+<div class="row clearfix" style="border-top:2px dotted #737373; margin-left:10px;margin-right: 10px ">
+    <div class="col-md-6 column" style="border-right:2px dotted #737373; padding-left: 0px; ">
+        <h3 class="pull-left"><img src="../../images/bullet_02.png"> 의료</h3>
+        <ul class="list-unstyled list-inline pull-right pager01">
+            <li>
+                <a href="#/portfolio8"> 더보기 ></a>
+            </li>
+        </ul>
+        <div class="row clearfix"></div>
+        <div class="col-md-6 column">
+            <ul class="list-unstyled port-thum list-inline">
+                <li data-toggle="modal" data-target="#modal-container-09">
+                    <img src="../../images/portfolio/hospital/hospital_04_thum.png" class="img-thumbnail">
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6 column">
+            <ul class="list-unstyled port-thum list-inline">
+                <li data-toggle="modal" data-target="#modal-container-10">
+                    <img src="../../images/portfolio/hospital/hospital_02_thum.png" class="img-thumbnail">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-6 column" style=" padding-right: 0px;">
+        <h3 class="pull-left"><img src="../../images/bullet_02.png"> 호텔</h3>
+        <ul class="list-unstyled list-inline pull-right pager01">
+            <li>
+                <a href="#/portfolio12"> 더보기 ></a>
+            </li>
+        </ul>
+        <div class="row clearfix"></div>
+        <div class="col-md-6 column">
+            <ul class="list-unstyled port-thum list-inline">
+                <li data-toggle="modal" data-target="#modal-container-11">
+                    <img src="../../images/portfolio/hotel/hotel_03_thum.png" class="img-thumbnail">
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6 column">
+            <ul class="list-unstyled port-thum list-inline">
+                <li data-toggle="modal" data-target="#modal-container-12">
+                    <img src="../../images/portfolio/hotel/hotel_04_thum.png" class="img-thumbnail">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!--------------------------모달 페이지-------------------------------------->
+
+<div class="modal fade" id="modal-container-01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+                <h4 class="modal-title" id="myModalLabel"><img src="../../images/bullet_02.png" alt="포폴분류"> 레스토랑 </h4>
+            </div>
+            <div class="modal-body">
+                <img src="../../images/portfolio/restaurent/restaurent_03.png" class="img-thumbnail">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
             </div>
         </div>
     </div>
 </div>
 
+<div class="modal fade" id="modal-container-02" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+                <h4 class="modal-title" id="myModalLabel"><img src="../../images/bullet_02.png" alt="포폴분류"> 레스토랑 </h4>
+            </div>
+            <div class="modal-body">
+                <img src="../../images/portfolio/restaurent/restaurent_04.png" class="img-thumbnail">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div class="modal fade" id="modal-container-03" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+                <h4 class="modal-title" id="myModalLabel"><img src="../../images/bullet_02.png" alt="포폴분류"> 모델하우스 </h4>
+            </div>
+            <div class="modal-body">
+                <img src="../../images/portfolio/md-house/md-house_09.png" class="img-thumbnail">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-container-04" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+                <h4 class="modal-title" id="myModalLabel"><img src="../../images/bullet_02.png" alt="포폴분류"> 모델하우스 </h4>
+            </div>
+            <div class="modal-body">
+                <img src="../../images/portfolio/md-house/md-house_10.png" class="img-thumbnail">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-container-05" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+                <h4 class="modal-title" id="myModalLabel"><img src="../../images/bullet_02.png" alt="포폴분류"> 스포츠 </h4>
+            </div>
+            <div class="modal-body">
+                <img src="../../images/portfolio/sports/sports_04.png" class="img-thumbnail">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-container-06" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+                <h4 class="modal-title" id="myModalLabel"><img src="../../images/bullet_02.png" alt="포폴분류"> 스포츠 </h4>
+            </div>
+            <div class="modal-body">
+                <img src="../../images/portfolio/sports/sports_06.png" class="img-thumbnail">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-container-07" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+                <h4 class="modal-title" id="myModalLabel"><img src="../../images/bullet_02.png" alt="포폴분류"> 웨딩홀 </h4>
+            </div>
+            <div class="modal-body">
+                <img src="../../images/portfolio/weddinghall/weddinghall_02.png" class="img-thumbnail">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-container-08" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+                <h4 class="modal-title" id="myModalLabel"><img src="../../images/bullet_02.png" alt="포폴분류"> 웨딩홀 </h4>
+            </div>
+            <div class="modal-body">
+                <img src="../../images/portfolio/weddinghall/weddinghall_04.png" class="img-thumbnail">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-container-09" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+                <h4 class="modal-title" id="myModalLabel"><img src="../../images/bullet_02.png" alt="포폴분류"> 의료 </h4>
+            </div>
+            <div class="modal-body">
+                <img src="../../images/portfolio/hospital/hospital_04.png" class="img-thumbnail">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-container-10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+                <h4 class="modal-title" id="myModalLabel"><img src="../../images/bullet_02.png" alt="포폴분류"> 의료 </h4>
+            </div>
+            <div class="modal-body">
+                <img src="../../images/portfolio/hospital/hospital_02.png" class="img-thumbnail">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-container-11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+                <h4 class="modal-title" id="myModalLabel"><img src="../../images/bullet_02.png" alt="포폴분류"> 호텔 </h4>
+            </div>
+            <div class="modal-body">
+                <img src="../../images/portfolio/hotel/hotel_03.png" class="img-thumbnail">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-container-12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+                <h4 class="modal-title" id="myModalLabel"><img src="../../images/bullet_02.png" alt="포폴분류"> 호텔 </h4>
+            </div>
+            <div class="modal-body">
+                <img src="../../images/portfolio/hotel/hotel_04.png" class="img-thumbnail">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
 
 <div class="row clearfix" style="margin-top: 110px; padding-top:50px;  border-top:2px solid #737373; ">
-    <div class="col-xs-12" style="padding-left: 0px; padding-right: 0px;">
-        <iframe src="/views/footer.html" class="col-xs-12" style="padding-left: 0px; padding-right: 0px;"></iframe>
+    <div class="col-md-12" style="padding-left: 0px; padding-right: 0px;">
+        <div class="container" style="width: 960px;">
+            <footer>
+
+                <!-- end of footer -->
+                <div class="col-md-5">
+                    <a class="pull-right"><img src="../images/logo_small.png"></a>
+                </div>
+                <div class="col-md-7 pull-right" style="font-size: 11px;">
+                    <p>
+                        상호 : 메종 디자인 | 대표 최홍인 | T:032)329-9808 | F:032)329-9811</p>
+
+                    <p>주소 : [420-861] 경기도 부천시 원미구 길주로 77번길 19, 세진 프라자 503호</p>
+
+                    <p>　　　(상동 532-16번지 세진 PLAZA 503호)
+                    </p>
+                    <address class="">
+                        COPYRIGHT &copy; 2014 메종디자인 ALL RIGHTS RESERVED
+                    </address>
+            </footer>
+
+        </div>
     </div>
+</div>
+</div>
 </div>
 
 
