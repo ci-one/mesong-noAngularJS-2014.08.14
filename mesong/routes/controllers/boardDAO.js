@@ -7,23 +7,42 @@
 
 var connect = require('../controllers/dbconnect_v1.01.js');
 var query = require('../controllers/query.js');
-var fs = require('fs');
 
 var c = connect.connection();
 
 
 //연결로그 출력
 c.on('connect', function() {
-    console.log('Client connected');
+    console.log('DataBase connected');
 }).on('error', function(err) {
     console.log('Client error: ' + err);
 }).on('close', function(hadError) {
     console.log('Client closed');
 });
 
+exports.chk = function(req,res){
+    var id = req.body.account;
+    var pswd = req.body.pswd;
+
+    console.log(id+pswd);
+    var sending = [];
+    c.query(query.chkAccount,[id,pswd]).on('result',function(res){
+        res.on('row',function(row){
+            sending.push(row);
+        });
+    }).on('end',function(){
+        var obj = {sending:sending};
+        if(sending[0]!=null){
+            res.send(200,sending);
+        }else{
+            res.send(200,null);
+        }
+    })
+};
 
 exports.list = function(req, res) {
     var sending = [];
+    console.log('this is get list');
     c.query(query.boardlist,null).on('result', function(res) {
         res.on('row', function(row) {
             sending.push(row);
@@ -37,6 +56,7 @@ exports.list = function(req, res) {
         }
     });
 };
+
 exports.get = function(req, res) {
     var id = req.body.id;
     var sending = [];
@@ -55,24 +75,21 @@ exports.get = function(req, res) {
 };
 
 exports.insert = function(req, res) {
-    var title = req.body.title;
-    var content = req.body.content;
-    var file = req.body.file;
-    var writer = req.body.writer;
-    var href = req.body.href;
-
-    console.log('title : ' + title);
-    console.log('writer : ' + writer);
-    console.log('content : ' + content);
-    console.log('file : ' + file.name);
-    console.log('href : ' + href);
-
+    var title = req.body.usedInputTitle;
+    var content = req.body.usedInputContent;
+    var writer = req.body.usedInputname;
+    var company = req.body.usedInputCompany;
+    var contact = req.body.usedInputCall;
+    var email = req.body.usedInputEmail;
+    if(email==null||email==''){
+        email = '이메일 입력 안함';
+    }
+    console.log('title : ' +title)
     // title, content, file, writer, href
-    c.query(query.boardinsert,[ title, content, file, writer, href ]).on('result', function (res) {
+    c.query(query.boardinsert,[ title, content, writer,company, contact, email ]).on('result', function (res) {
         res.on('row', function (row) {});
     }).on('end', function () {
-        var obj = '추가하였습니다.';
-        res.send(200, obj);
+        res.render('1400-request/050-1400-requestWrite',{title:'Mesong'});
     });
 };
 
@@ -100,8 +117,8 @@ exports.update = function(req, res) {
     var id = req.body.id;
     var title = req.body.title;
     var content = req.body.content;
-    var file = 'no file';//req.body.file
-    var href = req.body.href;
+    var contact = req.body.contact;
+    var email = req.body.email;
 
     console.log(title);
     console.log(content);
@@ -109,7 +126,7 @@ exports.update = function(req, res) {
     console.log(href);
 
 // title, content, file, href, id
-    c.query(query.boardmodify,[ title, content, file, href, id ]).on('result', function (res) {
+    c.query(query.boardmodify,[ title, content, contact, email, id ]).on('result', function (res) {
         res.on('row', function (row) {});
     }).on('end', function () {
         var obj = '수정하였습니다.';
@@ -117,6 +134,17 @@ exports.update = function(req, res) {
     });
 };
 
+exports.delete = function(req,res){
+    var id = req.body.id;
+
+    c.query(query.boardremove,[id]).on('result',function(res){
+        res.on('row',function(row){});
+    }).on('end',function(){
+        var obj = '삭제하였습니다.';
+        res.send(200,obj);
+    });
+};
+/*
 exports.delete = function(req,res){
     var id = req.body.id;
     var file = req.body.file;
@@ -138,4 +166,4 @@ exports.delete = function(req,res){
             });
         }
     })
-};
+};*/

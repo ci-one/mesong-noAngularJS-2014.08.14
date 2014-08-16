@@ -21,10 +21,8 @@
 
     <!-- build:js(app) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -35,9 +33,6 @@
     <!--<link rel="stylesheet" href="styles/wacommon.css">-->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
-
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icon/cione_logo.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icon/cione_logo.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icon/cione_logo.png">
@@ -102,7 +97,7 @@
                         <a href="/views/1300-portfolio/050-1300-portfolio1.html">포트폴리오</a>
                     </li>
                     <li>
-                        <a href="/views/1400-request/050-1400-requestWrite.html"">견적문의</a>
+                        <a href="/views/1400-request/050-1400-requestWrite.html">견적문의</a>
                     </li>
                     <li>
                         <a href="/views/1500-contract/050-1500-contract.html">계약공정</a>
@@ -191,7 +186,6 @@
 
 
             <div class="col-md-9">
-
                 <div class="col-xs-12 column line-bottom">
                     <div class="row clearfix">
                         <h3 class="pull-left"> 견적문의 </h3>
@@ -209,88 +203,32 @@
                 <div class="row clearfix"><br></div>
 
                 <div class="row clearfix">
+                    <div class="col-md-offset-1 col-md-10 column col-md-offset-1">
 
-                    <div class="col-md-12 column">
-                        <form role="form">
-                            <div class="row clearfix">
-                                <div class="col-md-12 column">
-                                    <div class="form-group">
-                                        <label for="usedInputTitle">제목</label>
+                        <table class="table table-bordered table-condensed">
+                            <thead>
+                            <tr>
+                                <th>제목</th>
+                                <th>업체명</th>
+                                <th>작성자</th>
+                            </tr>
+                            </thead>
+                            <tbody id="liston">
+                            <tr>
 
-                                        <div class="row clearfix"></div>
-                                        <input type="text" class="form-control" id="usedInputTitle"
-                                               autofocus="autofocus" readonly="readonly"
-                                               value="{{Costomer_File.title}}">
-                                    </div>
-                                </div>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <td colspan="2">
+                            <div class="pagination pull-right">
+                                <div id="page-selection"></div>
                             </div>
-
-                            <div class="row clearfix">
-                                <div class="col-md-12 column">
-                                    <div class="col-md-6 column visible-md visible-lg myhalf">
-                                        <div class="form-group form-inline">
-                                            <label for="usedInputname">작성자</label>
-
-                                            <div class="row clearfix"></div>
-                                            <input type="text" class="form-control myhalfinput" id=""
-                                                   readonly="readonly" value="{{Costomer_File.writer}}">
-                                        </div>
-                                        <div class="form-group ">
-                                            <label for="usedInputCompany">업체명</label>
-
-                                            <div class="row clearfix"></div>
-                                            <input type="text" class="form-control myhalfinput" id=""
-                                                   readonly="readonly" value="{{Costomer_File.comp}}">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 column visible-md visible-lg myhalf">
-                                        <div class="form-group">
-                                            <label for="usedInputCall">연락처</label>
-
-                                            <div class="row clearfix"></div>
-                                            <input type="tel" class="form-control myhalfinput" id=""
-                                                   readonly="readonly" value="{{Costomer_File.contact}}">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="usedInputEmail">이메일</label>
-
-                                            <div class="row clearfix"></div>
-                                            <input type="email" class="form-control myhalfinput"
-                                                   id="usedInputEmail" readonly="readonly"
-                                                   value="{{Costomer_File.email}}">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-12 column visible-sm visible-xs"></div>
-                            </div>
-
-                            <div class="row clearfix">
-                                <div class="col-md-12 column">
-                                    <div class="form-group">
-                                        <label for="usedInputContent">내용</label>
-
-                                        <div class="row clearfix"></div>
-                                        <textarea rows="10" cols="" class="form-control"
-                                                  id="usedInputContent"
-                                                  readonly="readonly">{{Costomer_File.content}}</textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mywidth">
-                                <div class="pull-right">
-                                    <!--<a class="btn btn-danger pull-right" ng-click='remove(Costomer_File.id)'>삭제</a>-->
-                                    <a href="/boardlist" class="btn btn-primary pull-right">목록보기</a>
-
-                                </div>
-                            </div>
-                        </form>
+                        </td>
                     </div>
                 </div>
             </div>
-
         </div>
+
     </div>
 
     <div class="row clearfix" style="margin-top: 110px; padding-top:50px;  border-top:2px solid #737373; ">
@@ -313,24 +251,51 @@
                         <address class="">
                             COPYRIGHT &copy; 2014 메종디자인 ALL RIGHTS RESERVED
                         </address>
+                        </div>
                 </footer>
 
             </div>
         </div>
     </div>
 </div>
-</div>
 
 
-<script type="text/javascript" src="scripts/design/jquery.min.js"></script>
-<script type="text/javascript" src="scripts/design/bootstrap.min.js"></script>
 <script type="text/javascript" src="scripts/design/scripts.js"></script>
 <script src="scripts/design/respond.js"></script>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="scripts/pagenation.js"></script>
 <script src="scripts/design/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $.post('/getlist',function(data){
+            //alert(data.sending[0].id);
+            var tt = data.sending.length/5+1;
+            $('#liston').empty();
+            $(data.sending).each(function(i){
+                var id = this.id;
+                var title = this.title;
+                console.log(title);
+                $("#liston").append("<tr><th class='tstyle'><a href='/detailboard?id="+id+"'>"+this.title+"</a></th><td class='tstyle'>"+this.company+"</td><td class='tstyle'>"+this.writer+"</td></tr>");
+            });
+            $('#page-selection').bootpag({
+                total: tt,
+                page: 1,
+                maxVisible: 10
+            }).on('page', function(event, num){
+                $('#liston').empty();
+                $(data.sending).each(function(i){
+                    var id = this.id;
+                    var title = this.title;
+                    console.log(title);
+                    $("#liston").append("<tr><th class='tstyle'><a href='/detailboard?id="+id+"'>"+this.title+"</a></th><td class='tstyle'>"+this.company+"</td><td class='tstyle'>"+this.writer+"</td><td class='tstyle'>"+this.writer+"</td></tr>");
+                });
+            });
+        });
+    });
+</script>
 <script type="text/javascript">
     if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
         var msViewportStyle = document.createElement("style")

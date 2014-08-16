@@ -7,13 +7,11 @@ var express = require('express')
     , http = require('http')
     , path = require('path') ////////////인입 for ym
     , api = require('./routes/controllers/api')
-    , board = require('./routes/controllers/boardDAO')
-    , db = require('./routes/controllers/dbconnects');
+    , board = require('./routes/controllers/boardDAO');
 var app = express();
-
 // all environments
 app.engine('html', require('ejs').renderFile);
-app.set('port', process.env.PORT || 3402);
+app.set('port', process.env.PORT || 3401);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
 app.use(express.favicon());
@@ -28,7 +26,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 if ('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
-app.post('/getdata',db.list);
+
+
+
+app.post('/getdata',board.chk);
 
 app.post('/getlist',board.list);
 
@@ -40,8 +41,10 @@ app.post('/updateboard', board.update);
 
 app.post('/deleteboard',board.delete);
 
-app.post('/server/uploadFile', board.insertF);
 app.get('/',routes.lease);
+app.get('/insertboard',routes.boardI);
+app.get('/listboard',routes.boardL);
+app.get('/detailboard',routes.boardD);
 
 app.get('/api/awesomeThings',api.awesomeThings);
 

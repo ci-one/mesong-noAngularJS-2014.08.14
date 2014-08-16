@@ -8,9 +8,9 @@ var mariasql = require('mariasql');
 exports.connection = function(){
     //db연결정보 지정
     var host = '192.168.3.2';
-    var user = 'kji';
-    var password = 'kji';
-    var db = 'ymdb';
+    var user = 'admin';
+    var password = '1234';
+    var db = 'mejong';
 
 
 //connection setting

@@ -3,12 +3,16 @@
  */
 //쿼리를 나열하고 exports를 통해 배포하도록 한다.
 
-exports.boardlist = 'SELECT * FROM board order by id desc';
-exports.boardget = 'select * from board where id=?';
+exports.chkAccount = 'select * from account where account=? and pswd=?';
+
+exports.boardlist = 'SELECT * FROM board_test order by id desc';
+
+exports.boardget = 'select * from board_test where id=?';
+
 
 // title, content, file, writer, href
-exports.boardinsert = 'insert into board(id, title, content, file, writer, href, date) values(null,?,?,?,?,?,now())';
+exports.boardinsert = 'insert into board_test(id, title, content, writer,company, contact, email, date) values(null,?,?,?,?,?,?,now())';
 // title, content, file, href, id
-exports.boardmodify = 'update board set title=?, content=?, file=?, href=?, date=now() where id=?';
+exports.boardmodify = 'update board_test set title=?, content=?, contact=?, email=?, date=now() where id=?';
 
-exports.boardremove = 'delete from board where id=?';
+exports.boardremove = 'delete from board_test where id=?';
