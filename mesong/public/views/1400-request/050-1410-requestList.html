@@ -21,10 +21,8 @@
 
     <!-- build:js(app) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -35,9 +33,6 @@
     <!--<link rel="stylesheet" href="styles/wacommon.css">-->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
-
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icon/cione_logo.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icon/cione_logo.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icon/cione_logo.png">
@@ -77,8 +72,7 @@
                 <div class="col-md-12 column">
                     <a href="#"><h1 class="text-center"><img src="../../images/logo_large.png" alt="메종디자인"></h1></a>
 
-                    <p class="log"><a href="/views/1700-login/050-1700-login.html"
-                                      style="font-size: 7px;">로그인</a></p>
+                    <p class="log" id='loginsection'></p>
                 </div>
             </div>
 
@@ -102,7 +96,7 @@
                         <a href="/views/1300-portfolio/050-1300-portfolio1.html">포트폴리오</a>
                     </li>
                     <li>
-                        <a href="/views/1400-request/050-1400-requestWrite.html"">견적문의</a>
+                        <a href="/views/1400-request/050-1400-requestWrite.html">견적문의</a>
                     </li>
                     <li>
                         <a href="/views/1500-contract/050-1500-contract.html">계약공정</a>
@@ -218,27 +212,15 @@
                                 <th>작성자</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <tr ng-repeat='items in pagedItems[currentPage]'>
-                                <th class="tstyle"><a href="/views/1400-request/050-1420-requestDetail.html"> {{items.title}}</a></th>
-                                <td> {{items.comp}}</td>
-                                <td class="tstyle"> {{items.writer}}</td>
+                            <tbody id="liston">
+                            <tr>
+
                             </tr>
                             </tbody>
                         </table>
                         <td colspan="2">
                             <div class="pagination pull-right">
-                                <li ng-class="{disabled: currentPage == 0}">
-                                    <a href ng-click="prevPage()">« Prev</a>
-                                </li>
-                                <li ng-repeat="n in range(pagedItems.length)"
-                                    ng-class="{active: n == currentPage}"
-                                    ng-click="setPage()">
-                                    <a href ng-bind="n + 1"></a>
-                                </li>
-                                <li ng-class="{disabled: currentPage == pagedItems.length - 1}">
-                                    <a href ng-click="nextPage()">Next »</a>
-                                </li>
+                                <div id="page-selection"></div>
                             </div>
                         </td>
                     </div>
@@ -268,24 +250,79 @@
                         <address class="">
                             COPYRIGHT &copy; 2014 메종디자인 ALL RIGHTS RESERVED
                         </address>
+                    </div>
                 </footer>
 
             </div>
         </div>
     </div>
 </div>
-</div>
 
 
-<script type="text/javascript" src="scripts/design/jquery.min.js"></script>
-<script type="text/javascript" src="scripts/design/bootstrap.min.js"></script>
 <script type="text/javascript" src="scripts/design/scripts.js"></script>
 <script src="scripts/design/respond.js"></script>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="scripts/pagenation.js"></script>
 <script src="scripts/design/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var items = [];
+        var num = 1;
+        var pagedItem = [];
+        $.post('/getlist', function (data) {
+            items = data.sending;
+            divide(num);
+            pagenation(items.length / 5);
+        });
+
+        var divide = function (num) {
+            var n = 0;
+            for (var i = (num - 1) * 5; i < num * 5; i++) {
+                if (items[i] != null) {
+                    pagedItem[n] = items[i];
+                } else {
+                    pagedItem[n] = null;
+                }
+                n++;
+            }
+            $('#liston').empty();
+            $(pagedItem).each(function (i) {
+                var id = this.id;
+                var title = this.title;
+                if (this.id != null) {
+                    $("#liston").append("<tr><th class='tstyle'><a href='/detailboard?id=" + id + "'>" + this.title + "</a></th><td class='tstyle'>" + this.company + "</td><td class='tstyle'>" + this.writer + "</td></tr>");
+                }
+            });
+
+        };
+        var pagenation = function (paged) {
+            $('#page-selection').bootpag({
+                total: paged + 1,
+                page: 1,
+                maxVisible: 10
+            }).on('page', function (event, num) {
+                divide(num);
+            });
+        };
+    });
+</script>
+<script>
+    var chkout = function(){
+        sessionStorage.setItem('name', '');
+        sessionStorage.setItem('role', '');
+        history.back();
+    };
+    $(document).ready(function () {
+        if (sessionStorage.getItem('role') == null||sessionStorage.getItem('role')=='') {
+            $('#loginsection').append("<a href='/views/1700-login/050-1700-login.html' style='font-size: 7px;'>로그인</a>");
+        } else {
+            $('#loginsection').append("<span>"+sessionStorage.getItem('name')+" 님 환영합니다 || </span><a href='' onclick='chkout()' style='font-size: 7px;'>로그아웃</a>");
+        }
+    });
+</script>
 <script type="text/javascript">
     if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
         var msViewportStyle = document.createElement("style")

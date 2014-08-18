@@ -21,10 +21,8 @@
 
     <!-- build:js(app) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -35,9 +33,6 @@
     <!--<link rel="stylesheet" href="styles/wacommon.css">-->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
-
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icon/cione_logo.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icon/cione_logo.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icon/cione_logo.png">
@@ -77,11 +72,9 @@
                 <div class="col-md-12 column">
                     <a href="#"><h1 class="text-center"><img src="../../images/logo_large.png" alt="메종디자인"></h1></a>
 
-                    <p class="log"><a href="/views/1700-login/050-1700-login.html"
-                                      style="font-size: 7px;">로그인</a></p>
+                    <p class="log" id='loginsection'></p>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -102,7 +95,7 @@
                         <a href="/views/1300-portfolio/050-1300-portfolio1.html">포트폴리오</a>
                     </li>
                     <li>
-                        <a href="/views/1400-request/050-1400-requestWrite.html"">견적문의</a>
+                        <a href="/views/1400-request/050-1400-requestWrite.html">견적문의</a>
                     </li>
                     <li>
                         <a href="/views/1500-contract/050-1500-contract.html">계약공정</a>
@@ -119,126 +112,234 @@
 <!-- 컨텐츠 -->
 
 <div class="row clearfix">
-    <div class="col-md-12">
-        <div class="container" style="width: 960px;">
-            <!--사이드 메뉴-->
-            <div class="col-md-3">
-                <div class="container">
-                    <img src="/images/port-title.png" style="margin-top:15px;">
-                    <ul class="list-unstyled myborder">
-                        <li>
-                        </li>
-                        <li class="my">
-                            <a href="/views/1300-portfolio/050-1300-portfolio1.html"><img
-                                    src="/images/bullet_01.png"
-                                    class="bullet">레　스　토　랑</a>
-                        </li>
-                        <li class="my">
-                            <a href="/views/1300-portfolio/050-1300-portfolio2.html"> <img
-                                    src="/images/bullet_01.png" class="bullet">모 델 하 우 스</a>
-                        </li>
-                        <li class="my">
-                            <a href="/views/1300-portfolio/050-1300-portfolio3.html"><img
-                                    src="/images/bullet_01.png"
-                                    class="bullet">뷔　　　　　페</a>
-                        </li>
-                        <li class="my">
-                            <a href="/views/1300-portfolio/050-1300-portfolio4.html"><img
-                                    src="/images/bullet_01.png"
-                                    class="bullet">스　　포　　츠</a>
-                        </li>
-                        <li class="my">
-                            <a href="/views/1300-portfolio/050-1300-portfolio5.html"><img
-                                    src="/images/bullet_01.png"
-                                    class="bullet">신부대기.폐백실</a>
-                        </li>
-                        <li class="my">
-                            <a href="/views/1300-portfolio/050-1300-portfolio6.html"> <img
-                                    src="/images/bullet_01.png" class="bullet">오　　피　　스</a>
-                        </li>
-                        <li class="my">
-                            <a href="/views/1300-portfolio/050-1300-portfolio7.html"><img
-                                    src="/images/bullet_01.png"
-                                    class="bullet">웨　　딩　　홀</a>
-                        </li>
-                        <li class="my">
-                            <a href="/views/1300-portfolio/050-1300-portfolio8.html"> <img
-                                    src="/images/bullet_01.png" class="bullet">의　　　　　료</a>
-                        </li>
-                        <li class="my">
-                            <a href="/views/1300-portfolio/050-1300-portfolio9.html"> <img
-                                    src="/images/bullet_01.png" class="bullet">종　　　　　교</a>
-                        </li>
-                        <li class="my">
-                            <a href="/views/1300-portfolio/050-1300-portfolio10.html"> <img
-                                    src="/images/bullet_01.png" class="bullet">주　　　　　택</a>
-                        </li>
-                        <li class="my">
-                            <a href="/views/1300-portfolio/050-1300-portfolio11.html"><img
-                                    src="/images/bullet_01.png" class="bullet">체　　인　　점</a>
-                        </li>
-                        <li style="padding-bottom: 15px; padding-left: 10px;">
-                            <a href="/views/1300-portfolio/050-1300-portfolio12.html"> <img
-                                    src="/images/bullet_01.png" class="bullet">호　　　　　텔</a>
-                        </li>
+<div class="col-md-12">
+<div class="container" style="width: 960px;">
+<!--사이드 메뉴-->
+<div class="col-md-3">
+    <div class="container">
+        <img src="/images/port-title.png" style="margin-top:15px;">
+        <ul class="list-unstyled myborder">
+            <li>
+            </li>
+            <li class="my">
+                <a href="/views/1300-portfolio/050-1300-portfolio1.html"><img
+                        src="/images/bullet_01.png"
+                        class="bullet">레　스　토　랑</a>
+            </li>
+            <li class="my">
+                <a href="/views/1300-portfolio/050-1300-portfolio2.html"> <img
+                        src="/images/bullet_01.png" class="bullet">모 델 하 우 스</a>
+            </li>
+            <li class="my">
+                <a href="/views/1300-portfolio/050-1300-portfolio3.html"><img
+                        src="/images/bullet_01.png"
+                        class="bullet">뷔　　　　　페</a>
+            </li>
+            <li class="my">
+                <a href="/views/1300-portfolio/050-1300-portfolio4.html"><img
+                        src="/images/bullet_01.png"
+                        class="bullet">스　　포　　츠</a>
+            </li>
+            <li class="my">
+                <a href="/views/1300-portfolio/050-1300-portfolio5.html"><img
+                        src="/images/bullet_01.png"
+                        class="bullet">신부대기.폐백실</a>
+            </li>
+            <li class="my">
+                <a href="/views/1300-portfolio/050-1300-portfolio6.html"> <img
+                        src="/images/bullet_01.png" class="bullet">오　　피　　스</a>
+            </li>
+            <li class="my">
+                <a href="/views/1300-portfolio/050-1300-portfolio7.html"><img
+                        src="/images/bullet_01.png"
+                        class="bullet">웨　　딩　　홀</a>
+            </li>
+            <li class="my">
+                <a href="/views/1300-portfolio/050-1300-portfolio8.html"> <img
+                        src="/images/bullet_01.png" class="bullet">의　　　　　료</a>
+            </li>
+            <li class="my">
+                <a href="/views/1300-portfolio/050-1300-portfolio9.html"> <img
+                        src="/images/bullet_01.png" class="bullet">종　　　　　교</a>
+            </li>
+            <li class="my">
+                <a href="/views/1300-portfolio/050-1300-portfolio10.html"> <img
+                        src="/images/bullet_01.png" class="bullet">주　　　　　택</a>
+            </li>
+            <li class="my">
+                <a href="/views/1300-portfolio/050-1300-portfolio11.html"><img
+                        src="/images/bullet_01.png" class="bullet">체　　인　　점</a>
+            </li>
+            <li style="padding-bottom: 15px; padding-left: 10px;">
+                <a href="/views/1300-portfolio/050-1300-portfolio12.html"> <img
+                        src="/images/bullet_01.png" class="bullet">호　　　　　텔</a>
+            </li>
 
-                    </ul>
-                </div>
-            </div>
-
-
-            <!--우측 컨텐츠-->
+        </ul>
+    </div>
+</div>
 
 
-            <div class="col-md-9">
+<!--우측 컨텐츠-->
+
+
+<div class="col-md-9">
+<!--
+
 
 <style>
     @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
-    *{font-family:'Nanum Gothic', sans-serif; }
+    * {
+        font-family: 'Nanum Gothic', sans-serif;
+    }
 
-    img{max-width:100%;}
+    img {
+        max-width: 100%;
+    }
 
-    h3{font-family:'Nanum Gothic', sans-serif; font-size:2.4em; color:#714f29; font-weight:bold;}
-    .pager01{margin:30px 0 0;}
-    .pager01 .active{color:#bd4848;}
-    .pager01 li{font-size:1em; font-size:0.8em;}
-    .pager01 li a{color:#2d1911;}
-    .pager01 li a:hover{text-decoration:none;}
-    .line-bottom{border-bottom:2px solid #795936;}
+    h3 {
+        font-family: 'Nanum Gothic', sans-serif;
+        font-size: 2.4em;
+        color: #714f29;
+        font-weight: bold;
+    }
 
-    .well01{padding:40px;}
+    .pager01 {
+        margin: 30px 0 0;
+    }
 
-    .well01 p{font-size:1.2em; margin:0 0 20px; color:#696969; font-weight:600;}
-    .text01{color:#9b2526; font-size:1.3em;}
-    .text02{color:#b26025; text-decoration: underline;}
-    .text03{color:#515151; font-weight:800;}
-    .text04{color:#666666;}
-    p.str01{color:#df4826; font-size:1.4em; font-weight:600;}
+    .pager01 .active {
+        color: #bd4848;
+    }
 
+    .pager01 li {
+        font-size: 1em;
+        font-size: 0.8em;
+    }
 
-    .line-bottom02{border-bottom:1px solid #a8928e; margin:40px 0 20px;}
-    h4{font-family:'Nanum Gothic', sans-serif; font-size:2.0em; color:#714f29; font-weight:bold;}
-    .port-thum li{width:24%;}
-    .port-thum a li{width:24%;}
-    .port-thum{padding-left:15px; border-bottom:2px dotted #96afb6; padding-bottom:15px;}
+    .pager01 li a {
+        color: #2d1911;
+    }
 
-    .process-img{margin:60px;}
+    .pager01 li a:hover {
+        text-decoration: none;
+    }
 
-    h5{font-family:'Nanum Gothic', sans-serif; font-size:1.8em; color:#707070; font-weight:bold; margin:40px 0 20px;}
-    .address dt{font-size:1.3em; color:#6f1503;}
-    .address dd{margin-bottom:15px;color:#666666; font-weight:bold;}
-    .address dd:last-child{margin-bottom:0;}
-    .address{width:55%; border:3px double #bbbbbb; padding:15px; }
+    .line-bottom {
+        border-bottom: 2px solid #795936;
+    }
 
-    #map{width:55%;}
+    .well01 {
+        padding: 40px;
+    }
 
-    .form-signin{ max-width: 330px;
+    .well01 p {
+        font-size: 1.2em;
+        margin: 0 0 20px;
+        color: #696969;
+        font-weight: 600;
+    }
+
+    .text01 {
+        color: #9b2526;
+        font-size: 1.3em;
+    }
+
+    .text02 {
+        color: #b26025;
+        text-decoration: underline;
+    }
+
+    .text03 {
+        color: #515151;
+        font-weight: 800;
+    }
+
+    .text04 {
+        color: #666666;
+    }
+
+    p.str01 {
+        color: #df4826;
+        font-size: 1.4em;
+        font-weight: 600;
+    }
+
+    .line-bottom02 {
+        border-bottom: 1px solid #a8928e;
+        margin: 40px 0 20px;
+    }
+
+    h4 {
+        font-family: 'Nanum Gothic', sans-serif;
+        font-size: 2.0em;
+        color: #714f29;
+        font-weight: bold;
+    }
+
+    .port-thum li {
+        width: 24%;
+    }
+
+    .port-thum a li {
+        width: 24%;
+    }
+
+    .port-thum {
+        padding-left: 15px;
+        border-bottom: 2px dotted #96afb6;
+        padding-bottom: 15px;
+    }
+
+    .process-img {
+        margin: 60px;
+    }
+
+    h5 {
+        font-family: 'Nanum Gothic', sans-serif;
+        font-size: 1.8em;
+        color: #707070;
+        font-weight: bold;
+        margin: 40px 0 20px;
+    }
+
+    .address dt {
+        font-size: 1.3em;
+        color: #6f1503;
+    }
+
+    .address dd {
+        margin-bottom: 15px;
+        color: #666666;
+        font-weight: bold;
+    }
+
+    .address dd:last-child {
+        margin-bottom: 0;
+    }
+
+    .address {
+        width: 55%;
+        border: 3px double #bbbbbb;
         padding: 15px;
-        margin:0 auto;}
-    .form-style{margin:10px 0;}
+    }
 
-    .btn-brown{
+    #map {
+        width: 55%;
+    }
+
+    .form-signin {
+        max-width: 330px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+    .form-style {
+        margin: 10px 0;
+    }
+
+    .btn-brown {
         background-color: hsl(25, 100%, 24%) !important;
         background-repeat: repeat-x;
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e05d00", endColorstr="#7a3300");
@@ -254,12 +355,14 @@
         text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
         -webkit-font-smoothing: antialiased;
     }
-    .lo-01{margin-top:45px;}
+
+    .lo-01 {
+        margin-top: 45px;
+    }
 
 </style>
 
-
-
+-->
 
 <div class="col-md-12 column line-bottom">
     <div class="row clearfix">
@@ -271,12 +374,46 @@
     <p class="text-center"><img src="images/flower.png" alt="로그인페이지">
     </p>
 
-    <form class="form-signin">
-        <input type="text" class="form-control form-style" placeholder="아이디" autofocus>
-        <input type="password" class="form-control form-style" placeholder="비밀번호">
-        <button class="btn btn-lg btn-brown btn-block" type="submit" style="">
+    <form class="form-signin" id="login">
+
+        <input type="text" class="form-control form-style" placeholder="아이디" id="account" autofocus required="required">
+        <input type="password" class="form-control form-style" placeholder="비밀번호" id="pswd" required="required">
+        <button class="btn btn-lg btn-brown btn-block" type="button" onclick="chkProcess()" style="">
             Log in
         </button>
     </form>
 </div>
 
+</div>
+</div>
+</div>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/js/bootstrap.min.js"></script>
+
+
+<script>
+    var chkProcess = function () {
+        var account = $('#account').val();
+        var pswd = $('#pswd').val();
+        $.post('/getdata', {account: account, pswd: pswd}, function (data) {
+            sessionStorage.setItem('name', data.sending[0].name);
+            sessionStorage.setItem('role', data.sending[0].role);
+            history.back();
+        });
+    };
+    var chkout = function(){
+        sessionStorage.setItem('name', '');
+        sessionStorage.setItem('role', '');
+        history.back();
+    };
+    $(document).ready(function () {
+        if (sessionStorage.getItem('role') == null||sessionStorage.getItem('role')=='') {
+            $('#loginsection').append("<a href='/views/1700-login/050-1700-login.html' style='font-size: 7px;'>로그인</a>");
+        } else {
+            $('#loginsection').append("<span>"+sessionStorage.getItem('name')+" 님 환영합니다 || </span><a href='' onclick='chkout()' style='font-size: 7px;'>로그아웃</a>");
+        }
+    });
+</script>
+</body>
+</html>

@@ -72,8 +72,7 @@
                 <div class="col-md-12 column">
                     <a href="#"><h1 class="text-center"><img src="../../images/logo_large.png" alt="메종디자인"></h1></a>
 
-                    <p class="log"><a href="/views/1700-login/050-1700-login.html"
-                                      style="font-size: 7px;">로그인</a></p>
+                    <p class="log" id='loginsection'></p>
                 </div>
             </div>
 
@@ -279,7 +278,8 @@
                                 <p class="help-block">*필수 항목입니다</p>
 
                                 <div class="row clearfix"></div>
-                                <textarea rows="10" cols="" class="form-control" name="usedInputContent" id="usedInputContent"
+                                <textarea rows="10" cols="" class="form-control" name="usedInputContent"
+                                          id="usedInputContent"
                                           required="required"
                                           placeholder="문의사항을 적어주세요"></textarea>
                             </div>
@@ -289,8 +289,8 @@
                         <a>
                             <button type="submit" id="insertbtn" class="btn btn-primary pull-right">등 록</button>
                         </a><!--onclick="process()"-->
-                        <a href='/listboard' class="btn btn-primary pull-right">리스트보기
-                        </a>
+                        <span id="listsee">
+                        </span>
                     </div>
                 </form>
             </div>
@@ -342,6 +342,21 @@
     $('#used').on('submit', function (event) {
         $('#used').submit();
     });
+    var chkout = function () {
+        sessionStorage.setItem('name', '');
+        sessionStorage.setItem('role', '');
+        history.back();
+    };
+    $(document).ready(function () {
+        if (sessionStorage.getItem('role') == null || sessionStorage.getItem('role') == '') {
+            $('#loginsection').append("<a href='/views/1700-login/050-1700-login.html' style='font-size: 7px;'>로그인</a>");
+        } else {
+            $('#loginsection').append("<span>" + sessionStorage.getItem('name') + " 님 환영합니다 || </span><a href='' onclick='chkout()' style='font-size: 7px;'>로그아웃</a>");
+            $('#listsee').append("<a href='/listboard' class='btn btn-primary pull-right'>리스트보기</a>");
+        }
+    });
+
+
 </script>
 <script type="text/javascript">
     if (navigator.userAgent.match(/IEMobile\/10\.0/)) {

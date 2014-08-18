@@ -77,8 +77,7 @@
                 <div class="col-md-12 column">
                     <a href="#"><h1 class="text-center"><img src="../../images/logo_large.png" alt="메종디자인"></h1></a>
 
-                    <p class="log"><a href="/views/1700-login/050-1700-login.html"
-                                      style="font-size: 7px;">로그인</a></p>
+                    <p class="log" id='loginsection'></p>
                 </div>
             </div>
 
@@ -549,6 +548,20 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="scripts/design/bootstrap.min.js"></script>
+<script>
+    var chkout = function(){
+        sessionStorage.setItem('name', '');
+        sessionStorage.setItem('role', '');
+        history.back();
+    };
+    $(document).ready(function () {
+        if (sessionStorage.getItem('role') == null||sessionStorage.getItem('role')=='') {
+            $('#loginsection').append("<a href='/views/1700-login/050-1700-login.html' style='font-size: 7px;'>로그인</a>");
+        } else {
+            $('#loginsection').append("<span>"+sessionStorage.getItem('name')+" 님 환영합니다 || </span><a href='' onclick='chkout()' style='font-size: 7px;'>로그아웃</a>");
+        }
+    });
+</script>
 <script type="text/javascript">
     if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
         var msViewportStyle = document.createElement("style")

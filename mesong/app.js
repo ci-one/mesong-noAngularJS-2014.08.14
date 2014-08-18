@@ -9,6 +9,7 @@ var express = require('express')
     , api = require('./routes/controllers/api')
     , board = require('./routes/controllers/boardDAO');
 var app = express();
+var MemStore = express.session.MemoryStore;
 // all environments
 app.engine('html', require('ejs').renderFile);
 app.set('port', process.env.PORT || 3401);
@@ -16,6 +17,10 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
 app.use(express.favicon());
 app.use(express.logger('dev'));
+app.use(express.cookieParser());
+app.use(express.session({secret: '1234567890QWERTY',store: MemStore({
+    reapInterval: 60000 * 10
+})}));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
